@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Login Authentication System</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="register-card">
+        <div class="logo">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">Register to continue</p>
+
+        <form id="registerForm">
+          <!-- Username -->
+
+          <div class="input-group">
+            <label>Username</label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-user"></i>
+
+              <input type="text" id="username" placeholder="Enter username" />
+            </div>
+
+            <small class="error" id="usernameError"></small>
+          </div>
+
+          <!-- Email -->
+
+          <div class="input-group">
+            <label>Email</label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-envelope"></i>
+
+              <input type="email" id="email" placeholder="Enter email" />
+            </div>
+
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <!-- Password -->
+
+          <div class="input-group">
+            <label>Password</label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-lock"></i>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+              />
+
+              <span id="togglePassword">
+                <i class="fa-solid fa-eye"></i>
+              </span>
+            </div>
+
+            <small class="error" id="passwordError"></small>
+          </div>
+
+          <!-- Password Strength -->
+
+          <div class="strength-container">
+            <div class="strength-bar">
+              <div id="strengthFill" class="strength-fill"></div>
+            </div>
+
+            <span id="strengthText"> Password Strength </span>
+          </div>
+
+          <!-- Confirm Password -->
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-lock"></i>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm password"
+              />
+
+              <span id="toggleConfirmPassword">
+                <i class="fa-solid fa-eye"></i>
+              </span>
+            </div>
+
+            <small class="error" id="confirmPasswordError"></small>
+          </div>
+
+          <button type="submit" class="btn">Create Account</button>
+        </form>
+
+        <div class="login-link">
+          Already have an account?
+
+          <a href="./index.html"> Login </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/register.js"></script>
+  </body>
+</html>
