@@ -1,0 +1,1 @@
+CREATE DATABASE login_auth_system;
