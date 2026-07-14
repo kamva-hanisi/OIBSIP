@@ -1,0 +1,227 @@
+/* ─── Reset & Base ─── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* ─── Container ─── */
+.container {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* ─── Input Row ─── */
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#taskInput:focus {
+  border-color: #6c63ff;
+}
+
+#addTaskButton {
+  padding: 0.65rem 1.25rem;
+  background: #6c63ff;
+  color: #fff;
+  border: 2px solid #6c63ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+#addTaskButton:hover {
+  background: #5a52e0;
+}
+
+#addTaskButton:active {
+  transform: scale(0.97);
+}
+
+/* ─── Filters ─── */
+.filters {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 0.45rem 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.filter-btn:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+.filter-btn.active {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+/* ─── Task List ─── */
+#taskList {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 0.45rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.task-item:hover {
+  border-color: #d0d0d0;
+  background: #fafafa;
+}
+
+.task-item .checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 0.7rem;
+  color: transparent;
+}
+
+.task-item .checkbox:hover {
+  border-color: #6c63ff;
+}
+
+.task-item .checkbox.checked {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+.task-item .task-text {
+  flex: 1;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.task-item .task-text.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-item .delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  cursor: pointer;
+  color: #ccc;
+  padding: 0 0.25rem;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.task-item .delete-btn:hover {
+  color: #e74c3c;
+}
+
+/* ─── Footer Bar ─── */
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 2px solid #f0f0f0;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+#clearCompleted {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+#clearCompleted:hover {
+  color: #e74c3c;
+  background: #fef0f0;
+}
+
+/* ─── Footer ─── */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+/* ─── State: empty ─── */
+.empty-msg {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #bbb;
+  font-size: 0.9rem;
+}
